@@ -1,1 +1,50 @@
+.venv
+flagged
+gradio_cached_examples
+
+__pycache__/
+*.py[cod]
+*$py.class
 *.pdf
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+wheels/
+
+# Log files
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# IDEs
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
