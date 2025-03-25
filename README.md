@@ -1,10 +1,8 @@
 # WikiQA Dataset
 
-![Dataset Creation](dataset-creation.png)
-
 ## Selected Documents
 
-### Mathemathics 
+### Mathematics  
 *   [Prime Numbers](https://en.wikipedia.org/wiki/Prime_number)
 *   [Linear Algebra](https://en.wikipedia.org/wiki/Linear_algebra)
 *   [Calculus](https://en.wikipedia.org/wiki/Calculus)
@@ -42,7 +40,7 @@
 
 ## Types of Questions
 
-(✔) Are Included
+<!-- questions that depend of prev history chat -->
 
 [✔] 1. Factual Questions:
 
@@ -54,7 +52,7 @@ These questions seek specific, objective answers based on scientific facts or da
 
     How many chromosomes do humans have?
 
-[✔] 2. Multihop Questions:
+[✔] 2. MultiHop Questions:
 
 These questions require combining multiple pieces of scientific information or performing sequential reasoning.
 
@@ -102,6 +100,75 @@ These questions explore the moral, ethical, or philosophical implications of sci
 
     Should scientists be held responsible for the potential misuse of their discoveries, such as nuclear weapons?
 
+
+## Evaluation Metrics
+
+[Key Metrics and Evaluation Methods for RAG - youtube](https://www.youtube.com/watch?v=cRz0BWkuwHg)
+
+### Retrieval Metrics
+
+#### Precision
+
+$\text{Precision} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Positives})}$
+
+- The proportion of relevant documents among the retrieved documents
+- It measures if the info you've retrieved is highly relevant or not
+
+#### Recall
+
+$\text{Recall} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Negatives})}$
+
+- The proportion of relevant documents that where successfully retrieved
+- It measures if you aren't retrieving important information
+
+#### Hit Rate 
+
+- Proportion of queries for which at least one relevant document is retrieved withing the top few results
+- It measures the system ability of retrieving relevant documents 
+
+#### Mean Reciprocal Rank (MRR)
+
+$\text{MRR} = (1 / Q) * \sum(1 / R_1)$
+
+$Q$: total number of queries
+$R_1$: rank of the first relevant document
+
+- How high the most relevant document appears in the search result
+- It measures the system ability to prioritize top results
+- Used when the top document is the most important
+
+#### Normalized Discounted Cumulative Gain (NDCG)
+
+- It measures the ranking quality of all documents by considering both relevance and order
+- Used when the entire top_k retrieved docs are important
+
+### Generation Metrics 
+
+#### Faithfulness
+
+> **Question**: Where and when was Einstein born?
+> **Context**: Albert Einstein (born 14 March 1879) was a German-born theoretical physicist, widely held to be one of the greatest and most influential scientist of all time.
+>
+> **High faithfulness answer**: Einstein was born in Germany on 14th March 1879
+> **Low faithfulness answer**: Einstein was born in Germany on 20th March 1879
+
+- Ensures response reflect accurate relevant document information without errors
+
+#### Answer Relevancy
+
+> **Question**: Where is France and what is it's capital?
+> **Low relevance answer**: France is in western Europe
+> **High relevance answer**: France is in western Europe and Paris is its capital 
+
+- Evaluate the answer relevance to the original query
+
+#### Answer Correctness
+
+> **Ground truth**: Einstein was born in 1879 in Germany.
+> **High answer correctness**: In 1879, Einstein was born in Germany
+> **Low answer correctness**: Einstein was born in Spain in 1879
+
+- Assess if the answer align with a query reference answer (ground truth)
 
 ## Documents Structure
 
