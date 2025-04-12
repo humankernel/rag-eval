@@ -9,9 +9,11 @@ load_dotenv()
 
 
 class Settings(BaseModel):
-    LLM_MODEL: str = os.getenv("LLM_MODEL", "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B")
+    LLM_MODEL: str = os.getenv(
+        "LLM_MODEL", "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+    )
     DTYPE: str = os.getenv("DTYPE", "float16")
-    CTX_WINDOW: int = 2048
+    CTX_WINDOW: int = int(os.getenv("CTX_WINDOW", "2048"))
     TORCH_DEVICE: Literal["cuda", "cpu"] | None = None
     ENVIRONMENT: str | Literal["dev", "prod"] = os.getenv("ENVIRONMENT", "prod")
     CLIENT_URL: str = os.getenv("CLIENT_URL", "http://localhost:8000/v1")

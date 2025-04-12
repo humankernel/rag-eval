@@ -1,4 +1,5 @@
-import typing as t
+from typing import Literal
+
 from openai import OpenAI
 from vllm import LLM, SamplingParams
 
@@ -17,7 +18,6 @@ def get_client() -> LLM | OpenAI:
                 dtype=settings.DTYPE,
                 # gpu_memory_utilization=0.95,
                 task="generate",
-                seed=42,
                 enforce_eager=False,
                 max_model_len=settings.CTX_WINDOW,
                 max_num_seqs=2,
@@ -34,7 +34,9 @@ def generate(prompt: str, llm: LLM | OpenAI, model_params: dict = {}) -> str:
 
     match settings.ENVIRONMENT:
         case "prod":
-            assert isinstance(llm, LLM), "LLM should be an instance of LLM class"
+            assert isinstance(llm, LLM), (
+                "LLM should be an instance of LLM class"
+            )
             sampling_params = SamplingParams(
                 max_tokens=model_params.get("max_tokens", 100),
                 temperature=model_params.get("temperature", 0.25),
@@ -47,7 +49,9 @@ def generate(prompt: str, llm: LLM | OpenAI, model_params: dict = {}) -> str:
             outputs = llm.generate(prompt, sampling_params)
             return outputs[0].outputs[0].text
         case "dev":
-            assert isinstance(llm, OpenAI), "LLM should be and instance of OpenAI class"
+            assert isinstance(llm, OpenAI), (
+                "LLM should be and instance of OpenAI class"
+            )
             params = {
                 "max_tokens": model_params.get("max_tokens", 100),
                 "temperature": model_params.get("temperature", 0.25),
@@ -61,16 +65,14 @@ def generate(prompt: str, llm: LLM | OpenAI, model_params: dict = {}) -> str:
                 prompt=prompt,
                 **params,
             )
+
             return response.choices[0].text
         case _:
             raise ValueError("Correctly configure the env to be dev | prod")
 
 
-llm = get_client()
-
-
 def generate_qa(
-    type_q: t.Literal["factual", "multihop"], context: str
+    type_q: Literal["factual", "multihop"], context: str, llm: LLM | OpenAI
 ) -> tuple[str, str] | None:
     match type_q:
         case "factual":

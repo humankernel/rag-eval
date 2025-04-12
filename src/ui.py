@@ -1,7 +1,8 @@
+from typing import Literal
 import gradio as gr
 import pandas as pd
 
-from lib.llm import generate_qa
+from lib.llm import generate_qa, get_client
 from lib.types import QA, Article
 from lib.utils import create_json_file, format_context
 from lib.wikipedia import get_wikipedia_article
@@ -10,13 +11,16 @@ from lib.wikipedia import get_wikipedia_article
 
 SOURCES = ["Wikipedia"]
 LANGUAGES = ["en", "es"]
-QA_TYPES = ["factual", "multihop"]
+TYPES_QUERIES = ["factual", "multihop"]
 MAX_CHUNKS_PER_QA = 3
+llm = get_client()
 
 # --- Backend & Data Handling
 
 
-def get_articles(source: str, title: str, languages: list[str]) -> list[Article]:
+def get_articles(
+    source: str, title: str, languages: list[str]
+) -> list[Article]:
     articles: list[Article] | None
     error_msg = ""
 
@@ -30,7 +34,9 @@ def get_articles(source: str, title: str, languages: list[str]) -> list[Article]
                 error_msg = f"Source '{source}' is not supported."
     except Exception as e:
         print(f"Error fetching article: {e}")
-        error_msg = f"An unexpected error occurred while fetching from {source}."
+        error_msg = (
+            f"An unexpected error occurred while fetching from {source}."
+        )
 
     if error_msg:
         raise gr.Error(error_msg)
@@ -38,18 +44,29 @@ def get_articles(source: str, title: str, languages: list[str]) -> list[Article]
     return articles or []
 
 
-def generate_syntetic_qa_pair(type_q: str, article: Article, chunks_idx: list[int]):
+def generate_syntetic_qa_pair(
+    type_q: Literal["factual", "multihop"],
+    article: Article,
+    chunks_idx: list[int],
+):
     chunks = [article.chunks[chunk_idx] for chunk_idx in chunks_idx]
     context = format_context(chunks)
-    output = generate_qa(type_q, context=context)
-
+    output = generate_qa(type_q, context, llm)
     if not output:
         raise gr.Error(f"Error to generate for {article.title}")
 
     question, answer = output
     return (
-        gr.update(value=question, visible=True, interactive=True),
-        gr.update(value=answer, visible=True, interactive=True),
+        gr.update(
+            value=question,
+            visible=True,
+            interactive=True,
+        ),
+        gr.update(
+            value=answer,
+            visible=True,
+            interactive=True,
+        ),
     )
 
 
@@ -99,7 +116,9 @@ def build_article_tab(articles_state: gr.State) -> None:
             submit_btn=True,
         )
         title.submit(
-            get_articles, inputs=[source, title, languages], outputs=[articles_state]
+            get_articles,
+            inputs=[source, title, languages],
+            outputs=[articles_state],
         )
 
         @gr.render([articles_state])
@@ -108,8 +127,8 @@ def build_article_tab(articles_state: gr.State) -> None:
                 gr.Markdown("No articles fetched yet.")
                 return
 
+            gr.Markdown(f"Fetched {len(fetched_articles)} article(s):")
             for article in fetched_articles:
-                gr.Markdown(f"Fetched {len(fetched_articles)} article(s):")
                 with gr.Accordion(
                     f"({article.language}) - {article.title}", open=False
                 ):
@@ -118,16 +137,7 @@ def build_article_tab(articles_state: gr.State) -> None:
 
                     gr.Markdown("**Chunks:**")
                     if article.chunks:
-                        df = pd.DataFrame(
-                            [
-                                {
-                                    "Level": chunk["level"],
-                                    "Heading": chunk["heading"],
-                                    "Content": chunk["content"],
-                                }
-                                for chunk in article.chunks
-                            ]
-                        )
+                        df = pd.DataFrame(article.chunks)
                         gr.DataFrame(df, wrap=True)
                     else:
                         gr.Markdown("No chunks found for this article.")
@@ -136,10 +146,10 @@ def build_article_tab(articles_state: gr.State) -> None:
 def build_qa_tab(articles_state: gr.State, qa_data_state: gr.State) -> None:
     with gr.Tab("(2) Generate Q/A"):
         with gr.Row():
-            qa_type = gr.Dropdown(
+            type_q = gr.Dropdown(
                 label="Question Type",
-                choices=QA_TYPES,
-                value=QA_TYPES[0],
+                choices=TYPES_QUERIES,
+                value=TYPES_QUERIES[0],
                 interactive=True,
                 scale=3,
             )
@@ -150,14 +160,18 @@ def build_qa_tab(articles_state: gr.State, qa_data_state: gr.State) -> None:
         gr.Markdown("### Generate Questions per Article")
 
         @gr.render([articles_state, qa_counter])
-        def display_select_chunks(fetched_articles: list[Article], qa_counter: int):
+        def display_select_chunks(
+            fetched_articles: list[Article], qa_counter: int
+        ):
             if not fetched_articles:
                 gr.Markdown("Fetch an article in Tab (1) first.")
                 return
 
             # Show accordion with list of QA for each lang
             for article in fetched_articles:
-                with gr.Accordion(f"({article.language}) - {article.title}", open=True):
+                with gr.Accordion(
+                    f"({article.language}) - {article.title}", open=True
+                ):
                     for id in range(qa_counter):
                         chunks = gr.Dropdown(
                             label="Select Context Chunks",
@@ -171,14 +185,18 @@ def build_qa_tab(articles_state: gr.State, qa_data_state: gr.State) -> None:
                         )
                         question = gr.Textbox(label="Question", visible=False)
                         answer = gr.TextArea(
-                            label="Answer", visible=False, max_lines=10
+                            label="Answer", visible=False, max_lines=5
                         )
-                        generate_qa = gr.Button("Generate")
-                        generate_qa.click(
-                            lambda type_q, chunks_id: generate_syntetic_qa_pair(
-                                type_q, article, chunks_id
+                        generate_qa_button = gr.Button("Generate")
+                        generate_qa_button.click(
+                            lambda type_q,
+                            chunks_idx,
+                            art=article: generate_syntetic_qa_pair(
+                                type_q=type_q,
+                                article=art,
+                                chunks_idx=chunks_idx,
                             ),
-                            inputs=[qa_type, chunks],
+                            inputs=[type_q, chunks],
                             outputs=[question, answer],
                         ).then(
                             lambda type,
@@ -196,7 +214,7 @@ def build_qa_tab(articles_state: gr.State, qa_data_state: gr.State) -> None:
                                 qa_data=qa_data_state,
                             ),
                             inputs=[
-                                qa_type,
+                                type_q,
                                 chunks,
                                 question,
                                 answer,
@@ -223,7 +241,9 @@ def build_save_tab(articles_state: gr.State, qa_data_state: gr.State) -> None:
             with gr.Column(scale=3):
                 gr.Markdown("**Generated Q/A Pairs (JSON)**")
                 qa_json = gr.JSON(label="Q/A Data")
-                qa_file = gr.File(label="Download Q/A JSON File", file_count="single")
+                qa_file = gr.File(
+                    label="Download Q/A JSON File", file_count="single"
+                )
                 download_qa_button = gr.DownloadButton(
                     "Download Q/A JSON", variant="primary"
                 )

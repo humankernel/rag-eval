@@ -109,14 +109,14 @@ These questions explore the moral, ethical, or philosophical implications of sci
 
 #### Precision
 
-$\text{Precision} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Positives})}$
+$$\text{Precision} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Positives})}$$
 
 - The proportion of relevant documents among the retrieved documents
 - It measures if the info you've retrieved is highly relevant or not
 
 #### Recall
 
-$\text{Recall} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Negatives})}$
+$$\text{Recall} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{False Negatives})}$$
 
 - The proportion of relevant documents that where successfully retrieved
 - It measures if you aren't retrieving important information
@@ -128,9 +128,9 @@ $\text{Recall} = \frac{\text{(True Positives)}}{(\text{True Positives} + \text{F
 
 #### Mean Reciprocal Rank (MRR)
 
-$\text{MRR} = (1 / Q) * \sum(1 / R_1)$
+$$\text{MRR} = (1 / Q) * \sum(1 / R_1)$$
 
-$Q$: total number of queries
+$Q$: total number of queries \
 $R_1$: rank of the first relevant document
 
 - How high the most relevant document appears in the search result
@@ -139,8 +139,32 @@ $R_1$: rank of the first relevant document
 
 #### Normalized Discounted Cumulative Gain (NDCG)
 
+$$DCG_p=\sum_{i=1}^p\frac{2^{rel_i}-1}{\log_2(i+1)}$$
+
 - It measures the ranking quality of all documents by considering both relevance and order
 - Used when the entire top_k retrieved docs are important
+
+#### Mean Average Precision (MAP)
+
+- It measures the effectiveness of a system at returning relevant documents across multiple queries.
+- First, Average Precision (AP) evals how well relevant documents are ranked within the retrieved documents. It’s computed by averaging the precision values for each position of relevant document in the ranking of all the retrieved documents:
+
+$$\textbf{AP}=\frac{\sum_{k=1}^{M}\text{Relevance}(k) \times \text{Precision}(k)}{|{\text{Relevant Docs}}|}$$
+
+$M$ is the total number of documents retrieved.
+
+$\text{Relevance}(k)$ is a binary value, indicating whether document at position $k$ is relevant (=1) or not (=0).
+
+$\text{Precision}(k)$ is the precision when considering only top $k$ retrieved items.
+
+Then calculate the average AP across multiple queries to get the MAP:
+
+$$\textbf{MAP}=\frac{1}{N}\sum_{i=1}^{N}\text{AP}_i$$
+
+$N$ is the total number of queries.
+
+$\text{AP}_i$ is the average precision of the $i^{th}$ query.
+
 
 ### Generation Metrics 
 

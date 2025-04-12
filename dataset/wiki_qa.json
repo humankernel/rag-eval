@@ -1,0 +1,1313 @@
+[
+  {
+    "id": 0,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Prime number",
+    "chunks": [
+      4
+    ],
+    "question": "What is the central importance of prime numbers to number theory and mathematics in general?",
+    "answer": "The central importance of prime numbers to number theory and mathematics in general stems from the fundamental theorem of arithmetic. This theorem states that every integer larger than 1 can be written as a product of one or more primes. More strongly, this product is unique in the sense that any two prime factorizations of the same number will have the same numbers of copies of the same primes, although their ordering may differ"
+  },
+  {
+    "id": 1,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Prime number",
+    "chunks": [
+      3
+    ],
+    "question": "What is the name of the mathematician who developed the test for primality using factorization of p+1 or p-1?",
+    "answer": "The test for primality using factorization of p+1 or p-1 was developed by Hadamard and De la Vallée-Poussin."
+  },
+  {
+    "id": 2,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Prime number",
+    "chunks": [
+      14,
+      13
+    ],
+    "question": "What is the difference between two consecutive primes?",
+    "answer": "The difference between two consecutive primes can be as small as 2, and it must always be at least 2. If the difference is exactly 2, the numbers are called twin primes."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Prime number",
+    "chunks": [
+      19,
+      21
+    ],
+    "question": "What is the formula for generating numbers of Fermat?",
+    "answer": "The formula for generating numbers of Fermat is F_n = 2^{2^n} + 1, where n is a natural number. These numbers are linked to the construction of regular polygons with a ruler and compass."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Linear Algebra",
+    "chunks": [
+      1
+    ],
+    "question": "What are the two binary operations that must be satisfied by a vector space?",
+    "answer": "The two binary operations that must be satisfied by a vector space are vector addition and scalar multiplication."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Linear Algebra",
+    "chunks": [
+      4,
+      5
+    ],
+    "question": "What is the name of the matrix that represents a linear transformation from W to V?",
+    "answer": "The matrix that represents a linear transformation from W to V is called M."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Linear Algebra",
+    "chunks": [
+      6
+    ],
+    "question": "What is a linear endomorphism?",
+    "answer": "A linear endomorphism is a linear map that maps a vector space V to itself."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Linear Algebra",
+    "chunks": [
+      20,
+      14
+    ],
+    "question": "What is the difference between a module and a vector space?",
+    "answer": "The essential difference is that, if R is not a field, there are modules that do not have any basis. The free modules are those that have a basis, and those that are spanned by a finite set are the finitely generated modules."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Calculus",
+    "chunks": [
+      3
+    ],
+    "question": "What is the formula for calculating volume and area in integral calculus?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Calculus",
+    "chunks": [
+      7,
+      10
+    ],
+    "question": "What is the name of the mathematician who derived a formula for the sum of fourth powers?",
+    "answer": "Hasan Ibn al-Haytham, Latinized as Alhazen."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Calculus",
+    "chunks": [
+      16
+    ],
+    "question": "What is the constant of integration?",
+    "answer": "The constant of integration is known as C."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Calculus",
+    "chunks": [
+      18,
+      17
+    ],
+    "question": "What is the relationship between differentiation and integration?",
+    "answer": "The fundamental theorem of calculus states that differentiation and integration are inverse operations. Furthermore, it relates the values of antiderivatives to definite integrals. Because it is usually easier to compute an antiderivative than to apply the definition of a definite integral, the fundamental theorem of calculus provides a practical way of computing definite integrals. It can also be interpreted as a precise statement of the fact that differentiation is the inverse of integration."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Probability",
+    "chunks": [
+      1
+    ],
+    "question": "What is the difference between frequentist probability and propensity probability?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Probability",
+    "chunks": [
+      3,
+      4
+    ],
+    "question": "What is the main difference between the Kolmogorov formulation and Cox's theorem?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Probability",
+    "chunks": [
+      5
+    ],
+    "question": "What is the opposite of an event A?",
+    "answer": "The opposite or complement of an event A is the event [not A] (that is, the event of A not occurring), often denoted as P(not A) = 1 − P(A). As an example, the chance of not rolling a six on a six-sided die is 1 – (chance of rolling a six) = 1 − ⁠1/6⁠ = ⁠5/6"
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Probability",
+    "chunks": [
+      10
+    ],
+    "question": "What is the relationship between the odds of event A1 and event A2 before conditioning on another event B?",
+    "answer": "The odds on A1 to event A2 is simply the ratio of the probabilities of the two events."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Probability",
+    "chunks": [
+      3
+    ],
+    "question": "What are the two successful attempts to formalize probability?",
+    "answer": "The two successful attempts to formalize probability are the Kolmogorov formulation and the Cox formulation. In Kolmogorov's formulation (see also probability space), sets are interpreted as events and probability as a measure on a class of sets. In Cox's theorem, probability is taken as a primitive (i.e., not further analyzed), and the emphasis is on constructing a consistent assignment of probability values to propositions."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      1
+    ],
+    "question": "What is an algorithm?",
+    "answer": "An algorithm is an explicit set of instructions for determining an output, that can be followed by a computing machine or a human who could only carry out specific elementary operations on symbols."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      3,
+      4
+    ],
+    "question": "",
+    "answer": ""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      9
+    ],
+    "question": "What is the difference between a high-level description and an implementation description?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      9
+    ],
+    "question": "What are the three accepted levels of Turing machine description?",
+    "answer": "The three accepted levels of Turing machine description are high-level description, implementation description, and formal description."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      13,
+      14
+    ],
+    "question": "What is the main focus of algorithm design?",
+    "answer": "The main focus of algorithm design is resource (run-time, memory usage) efficiency. The big O notation is used to describe e.g., an algorithm's run-time growth as the size of its input increases."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      3
+    ],
+    "question": "What is the earliest evidence of algorithms?",
+    "answer": "The earliest evidence of algorithms is found in ancient Mesopotamian mathematics. A Sumerian clay tablet found in Shuruppak near Baghdad and dated to c. 2500 BC describes the earliest division algorithm."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      3,
+      20
+    ],
+    "question": "What is the difference between dynamic programming and simple recursion?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Algorithm",
+    "chunks": [
+      3,
+      20
+    ],
+    "question": "What is the earliest evidence of algorithms found in ancient Mesopotamian mathematics?",
+    "answer": "The earliest evidence of algorithms is found in ancient Mesopotamian mathematics. A Sumerian clay tablet found in Shuruppak near Baghdad and dated to c. 2500 BC describes the earliest division algorithm."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Data structure",
+    "chunks": [
+      0
+    ],
+    "question": "What is the difference between data structures and abstract data types?",
+    "answer": "Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Data structure",
+    "chunks": [
+      1
+    ],
+    "question": "What is the common goal of implementing data structures?",
+    "answer": "The common goal of implementing data structures is to efficiently organize and store data."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Data structure",
+    "chunks": [
+      3
+    ],
+    "question": "What is the name of a programming language that supports structs and records?",
+    "answer": "The C (a direct descendant of BCPL) and Pascal languages support structs and records, respectively."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Data structure",
+    "chunks": [
+      2
+    ],
+    "question": "What are the two primary operations of a stack?",
+    "answer": "The two primary operations of a stack are push (adds an element to the top of the stack) and pop (removes the topmost element from the stack)."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      1
+    ],
+    "question": "What is the term used to describe the exponential increase in computational complexity as a problem grows?",
+    "answer": "The term used to describe the exponential increase in computational complexity as a problem grows is \"combinatorial explosion.\""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      1
+    ],
+    "question": "What is the term for the phenomenon where algorithms become exponentially slower as problems grow?",
+    "answer": "The term for the phenomenon where algorithms become exponentially slower as problems grow is \"combinatorial explosion.\""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      2,
+      3
+    ],
+    "question": "What is the difference between a rational agent and an automated planning agent?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      2,
+      3
+    ],
+    "question": "What is the difference between planning and decision-making in AI?",
+    "answer": "Planning involves an agent with a specific goal, while decision-making involves preferences. In automated planning, the agent has a specific goal, whereas in automated decision-making, the agent has preferences."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      6
+    ],
+    "question": "What is the ability to use input from sensors to deduce aspects of the world called?",
+    "answer": "The field includes speech recognition, image classification, facial recognition, object recognition,object tracking, and robotic perception."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Artificial intelligence",
+    "chunks": [
+      10
+    ],
+    "question": "What are two different kinds of search used in AI?",
+    "answer": "Two different kinds of search used in AI are state space search and local search."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Computer programming",
+    "chunks": [
+      0
+    ],
+    "question": "What is the earliest known programmable device?",
+    "answer": "The earliest programmable device was invented by the Persian Banu Musa brothers in the 9th century."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Computer programming",
+    "chunks": [
+      1
+    ],
+    "question": "What was the language of early programs?",
+    "answer": "The language of early programs was machine code. Machine code was the language of early programs, written in the instruction set of the particular machine, often in binary notation."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Computer programming",
+    "chunks": [
+      2
+    ],
+    "question": "What was the first compiler related tool?",
+    "answer": "The first compiler related tool, the A-0 System, was developed in 1952 by Grace Hopper."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Computer programming",
+    "chunks": [
+      10
+    ],
+    "question": "What are some tools used for debugging?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Computer programming",
+    "chunks": [
+      10
+    ],
+    "question": "What is the first step in debugging?",
+    "answer": "The first step in debugging is to attempt to reproduce the problem. This can be a non-trivial task, for example as with parallel processes or some unusual software bugs. Also, specific user environment and usage history can make it difficult to reproduce the problem."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Programación",
+    "chunks": [
+      0
+    ],
+    "question": "What is the earliest known programmable device?",
+    "answer": "The earliest programmable device was invented by the Persian Banu Musa brothers in the 9th century."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Programación",
+    "chunks": [
+      1
+    ],
+    "question": "What was the language of early programs?",
+    "answer": "The language of early programs was machine code. Machine code was the language of early programs, written in the instruction set of the particular machine, often in binary notation."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Programación",
+    "chunks": [
+      2
+    ],
+    "question": "What was the first compiler related tool?",
+    "answer": "The first compiler related tool, the A-0 System, was developed in 1952 by Grace Hopper."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Programación",
+    "chunks": [
+      10
+    ],
+    "question": "What are some tools used for debugging?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Programación",
+    "chunks": [
+      10
+    ],
+    "question": "What is the first step in debugging?",
+    "answer": "The first step in debugging is to attempt to reproduce the problem. This can be a non-trivial task, for example as with parallel processes or some unusual software bugs. Also, specific user environment and usage history can make it difficult to reproduce the problem."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Cell (biology)",
+    "chunks": [
+      0
+    ],
+    "question": "What is the difference between eukaryotic cells and prokaryotic cells?",
+    "answer": "The difference between eukaryotic cells and prokaryotic cells is that eukaryotic cells possess a nucleus, whereas prokaryotic cells lack a nucleus but have a nucleoid region. Prokaryotes are single-celled organisms, whereas eukaryotes can be either single-celled or multicellular."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Cell (biology)",
+    "chunks": [
+      1
+    ],
+    "question": "What are the three regions of a prokaryotic cell?",
+    "answer": "The three regions of a prokaryotic cell are the cell envelope, cytoplasmic region, and nucleoid."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Cell (biology)",
+    "chunks": [
+      7
+    ],
+    "question": "What are the types of organelles in a cell?",
+    "answer": "The cytosol is the gelatinous fluid that fills the cell and surrounds the organelles."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Cell (biology)",
+    "chunks": [
+      17
+    ],
+    "question": "What is the process of duplicating a cell's genome called?",
+    "answer": "DNA replication."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      0
+    ],
+    "question": "What does the word genetics stem from?",
+    "answer": "The word genetics stems from the ancient Greek γενετικός genetikos meaning \"genitive\"/\"generative\", which in turn derives from γένεσις genesis meaning \"origin\"."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      2
+    ],
+    "question": "Who coined the word genetics?",
+    "answer": "William Bateson coined the word genetics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      5
+    ],
+    "question": "What is the difference between homozygous and heterozygous organisms?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      5
+    ],
+    "question": "What is the observable trait of an organism called?",
+    "answer": "The observable traits of the organism are called its phenotype."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      12
+    ],
+    "question": "",
+    "answer": ""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      12
+    ],
+    "question": "",
+    "answer": ""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      12
+    ],
+    "question": "",
+    "answer": ""
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Genetics",
+    "chunks": [
+      13
+    ],
+    "question": "What is the flow of information in molecular biology?",
+    "answer": "Information is transferred from nucleotide sequences into the amino acid sequence of proteins, but it never transfers from protein back into the sequence of DNA—a phenomenon Francis Crick called the central dogma of molecular biology."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Evolution",
+    "chunks": [
+      0
+    ],
+    "question": "What is the complete set of observable traits that make up the structure and behavior of an organism called?",
+    "answer": "The complete set of observable traits that make up the structure and behaviour of an organism is called its phenotype."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Evolution",
+    "chunks": [
+      2
+    ],
+    "question": "What is the name of a pig breed that carries MC1R mutations causing dominant black colouring?",
+    "answer": "The majority of pig breeds carry MC1R mutations disrupting wild-type colour and different mutations causing dominant black colouring."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Evolution",
+    "chunks": [
+      3
+    ],
+    "question": "What is the first cost of sex?",
+    "answer": "The first cost is that in sexually dimorphic species only one of the two sexes can bear young."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Evolution",
+    "chunks": [
+      9
+    ],
+    "question": "What is the difference between transition-transversion bias and GC-AT bias?",
+    "answer": "The difference between transition-transversion bias and GC-AT bias is that transition-transversion bias refers to a difference in expected rates for two different kinds of mutation, while GC-AT bias refers to another type of mutation."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      0
+    ],
+    "question": "What is the difference between population and ecosystem ecology?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      0
+    ],
+    "question": "What is the difference between population and ecosystem ecology?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      0
+    ],
+    "question": "What is the difference between population ecology and ecosystem ecology?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      1
+    ],
+    "question": "What is the scale of ecological dynamics?",
+    "answer": "The scale of ecological dynamics can operate like a closed system, such as aphids migrating on a single tree, while at the same time remaining open about broader scale influences, such as atmosphere or climate. Hence, ecologists classify ecosystems hierarchically by analyzing data collected from finer scale units."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      1
+    ],
+    "question": "What are the levels of hierarchy in ecology?",
+    "answer": "The levels of hierarchy in ecology include organisms, populations, guilds, communities, ecosystems, biomes, and the biosphere."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      3
+    ],
+    "question": "What is an example of a habitat shift?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      4
+    ],
+    "question": "What is the fundamental niche?",
+    "answer": "The fundamental niche is the set of environmental conditions under which a species is able to persist."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Ecology",
+    "chunks": [
+      9
+    ],
+    "question": "What is the difference between emigrants and immigrants in metapopulation terminology?",
+    "answer": "Emigrants leave a region, while immigrants enter a region."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Classical mechanics",
+    "chunks": [
+      1
+    ],
+    "question": "What is the branch of classical mechanics that deals with force and torque?",
+    "answer": "The branch of classical mechanics that deals with force and torque is Statics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Classical mechanics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used as a synonym for non-relativistic classical physics?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Classical mechanics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used for non-relativistic classical physics?",
+    "answer": "The term \"Newtonian mechanics\" is sometimes used as a synonym for non-relativistic classical physics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Classical mechanics",
+    "chunks": [
+      5
+    ],
+    "question": "What is the origin O?",
+    "answer": "The origin O is an arbitrary fixed reference point in space. In pre-Einstein relativity (known as Galilean relativity), time is considered an absolute, i.e., the time interval that is observed to elapse between any given pair of events is the same for all observers. In addition to relying on absolute time, classical mechanics assumes Euclidean geometry for the structure of space."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Classical mechanics",
+    "chunks": [
+      7
+    ],
+    "question": "What is the derivative of velocity with respect to time?",
+    "answer": "The derivative of velocity with respect to time is acceleration. Acceleration represents the change in velocity over time."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetism",
+    "chunks": [
+      1
+    ],
+    "question": "What is the branch of classical mechanics that deals with force and torque?",
+    "answer": "The branch of classical mechanics that deals with force and torque is Statics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetism",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used as a synonym for non-relativistic classical physics?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetism",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used for non-relativistic classical physics?",
+    "answer": "The term \"Newtonian mechanics\" is sometimes used as a synonym for non-relativistic classical physics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetism",
+    "chunks": [
+      5
+    ],
+    "question": "What is the origin O?",
+    "answer": "The origin O is an arbitrary fixed reference point in space. In pre-Einstein relativity (known as Galilean relativity), time is considered an absolute, i.e., the time interval that is observed to elapse between any given pair of events is the same for all observers. In addition to relying on absolute time, classical mechanics assumes Euclidean geometry for the structure of space."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetism",
+    "chunks": [
+      7
+    ],
+    "question": "What is the derivative of velocity with respect to time?",
+    "answer": "The derivative of velocity with respect to time is acceleration. Acceleration represents the change in velocity over time."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      1
+    ],
+    "question": "What ancient civilization is credited with discovering that amber could acquire an electric charge when it was rubbed with cloth?",
+    "answer": "The Greek philosopher Thales of Miletus discovered around 600 B.C.E. that amber could acquire an electric charge when it was rubbed with cloth, which allowed it to pick up light objects such as pieces of straw."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      3
+    ],
+    "question": "What is the second strongest of the four known fundamental forces?",
+    "answer": "The electromagnetic force is the second strongest of the four known fundamental forces."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      5
+    ],
+    "question": "What is the difference between linear and nonlinear dynamics?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      5
+    ],
+    "question": "What is the difference between linear and nonlinear phenomena?",
+    "answer": "Linear and nonlinear dynamics are different because electromagnetic fields couple to matter that follows nonlinear dynamical laws. This is studied, for example, in the subject of magnetohydrodynamics, which combines Maxwell theory with the Navier–Stokes equations. Another branch of electromagnetism dealing with nonlinearity is nonlinear optics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      6
+    ],
+    "question": "What is the name of the system that uses electric current as a fundamental quantity?",
+    "answer": "The electromagnetic CGS system."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      1
+    ],
+    "question": "What is the branch of classical mechanics that deals with force and torque?",
+    "answer": "The branch of classical mechanics that deals with force and torque is Statics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used as a synonym for non-relativistic classical physics?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the term used for non-relativistic classical physics?",
+    "answer": "The term \"Newtonian mechanics\" is sometimes used as a synonym for non-relativistic classical physics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      5
+    ],
+    "question": "What is the origin O?",
+    "answer": "The origin O is an arbitrary fixed reference point in space. In pre-Einstein relativity (known as Galilean relativity), time is considered an absolute, i.e., the time interval that is observed to elapse between any given pair of events is the same for all observers. In addition to relying on absolute time, classical mechanics assumes Euclidean geometry for the structure of space."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      7
+    ],
+    "question": "What is the derivative of velocity with respect to time?",
+    "answer": "The derivative of velocity with respect to time is acceleration. Acceleration represents the change in velocity over time."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      1
+    ],
+    "question": "What ancient civilization is credited with discovering that amber could acquire an electric charge when it was rubbed with cloth?",
+    "answer": "The Greek philosopher Thales of Miletus discovered around 600 B.C.E. that amber could acquire an electric charge when it was rubbed with cloth, which allowed it to pick up light objects such as pieces of straw."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      3
+    ],
+    "question": "What is the second strongest of the four known fundamental forces?",
+    "answer": "The electromagnetic force is the second strongest of the four known fundamental forces."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      5
+    ],
+    "question": "What is the difference between linear and nonlinear dynamics?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      5
+    ],
+    "question": "What is the difference between linear and nonlinear phenomena?",
+    "answer": "Linear and nonlinear dynamics are different because electromagnetic fields couple to matter that follows nonlinear dynamical laws. This is studied, for example, in the subject of magnetohydrodynamics, which combines Maxwell theory with the Navier–Stokes equations. Another branch of electromagnetism dealing with nonlinearity is nonlinear optics."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Electromagnetismo",
+    "chunks": [
+      6
+    ],
+    "question": "What is the name of the system that uses electric current as a fundamental quantity?",
+    "answer": "The electromagnetic CGS system."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      0
+    ],
+    "question": "What is the name of the physicist who named the Born rule?",
+    "answer": "The physicist who named the Born rule is Max Born."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the Schrödinger equation used to describe?",
+    "answer": "The Schrödinger equation is used to describe the time evolution of a quantum state. It is given by:"
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      3
+    ],
+    "question": "What is the commutator of two self-adjoint operators A and B?",
+    "answer": "The commutator of these two operators is [A, B] = AB - BA."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Quantum mechanics",
+    "chunks": [
+      8
+    ],
+    "question": "What is the simplest example of a quantum system with a position degree of freedom?",
+    "answer": "The simplest example of a quantum system with a position degree of freedom is a free particle in a single spatial dimension. A free particle is one which is not subject to external influences, so that its Hamiltonian consists only of its kinetic energy:"
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Thermodynamics",
+    "chunks": [
+      0
+    ],
+    "question": "What are the four laws of thermodynamics?",
+    "answer": "The first law specifies that energy can be transferred between physical systems as heat, as work, and with transfer of matter. The second law defines the existence of a quantity called entropy, that describes the direction, thermodynamically, that a system can evolve and quantifies the state of order of a system and that can be used to quantify the useful work that can be extracted from the system."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Thermodynamics",
+    "chunks": [
+      2
+    ],
+    "question": "What is the etymology of the word \"thermo-dynamic\"?",
+    "answer": "The term thermo-dynamic was coined by James Joule in 1858 to designate the science of relations between heat and power. However, Joule never used that term, but used instead the term perfect thermo-dynamic engine in reference to Thomson's 1849 phraseology."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Thermodynamics",
+    "chunks": [
+      3
+    ],
+    "question": "What is the study of thermodynamical systems?",
+    "answer": "The study of thermodynamical systems has developed into several related branches, each using a different fundamental model as a theoretical or experimental basis, or applying the principles to varying types of systems."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Thermodynamics",
+    "chunks": [
+      7
+    ],
+    "question": "What is the central aim of equilibrium thermodynamics?",
+    "answer": "Given a system in a well-defined initial equilibrium state, and given its surroundings, and given its constitutive walls, to calculate what will be the final equilibrium state of the system after a specified thermodynamic operation has changed its walls or surroundings."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      2
+    ],
+    "question": "When did Batman debut in Detective Comics?",
+    "answer": "Batman debuted in Detective Comics #27 in 1939."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      1
+    ],
+    "question": "Who inspired the character of Batman?",
+    "answer": "The character's alter ego, Bruce Wayne, was inspired by historical figures Robert the Bruce and Mad Anthony Wayne."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      1
+    ],
+    "question": "Who inspired Batman's alter ego, Bruce Wayne?",
+    "answer": "The character's alter ego, Bruce Wayne, was inspired by historical figures Robert the Bruce and Mad Anthony Wayne."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      5
+    ],
+    "question": "What is the name of Bruce Wayne's father?",
+    "answer": "The name of Bruce Wayne's father is Thomas."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      3
+    ],
+    "question": "What was the name of Batman's son in Morrison's run?",
+    "answer": "Damian Wayne."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      1
+    ],
+    "question": "Who inspired Batman's alter ego, Bruce Wayne?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      1
+    ],
+    "question": "Who inspired Batman's alter ego, Bruce Wayne?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      1
+    ],
+    "question": "Who inspired Batman's alter ego, Bruce Wayne?",
+    "answer": "Information not found in the provided text."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Batman",
+    "chunks": [
+      6
+    ],
+    "question": "What is the driving force behind Bruce Wayne's character?",
+    "answer": "The driving force behind Bruce Wayne's character is his parents' murder and their absence. Bob Kane and Bill Finger discussed Batman's background and decided that \"there's nothing more traumatic than having your parents murdered before your eyes\". Despite his trauma, he sets his mind on studying to become a scientist and to train his body into physical perfection to fight crime in Gotham City as Batman, an inspired idea from Wayne's insight into the criminal"
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      1
+    ],
+    "question": "What group does the dachshund belong to in countries which belong to the Fédération Cynologique Internationale (World Canine Federation)?",
+    "answer": "The dachshund belongs to the hound group or scent hound group in the United States and Great Britain."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      3
+    ],
+    "question": "What is the snout of a typical dachshund?",
+    "answer": "The snout is long."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      6
+    ],
+    "question": "What is the effect of the dapple gene on eye pigmentation expression?",
+    "answer": "The dapple gene affects eye pigmentation expression, resulting in multi-colored \"wall\" eyes with fully blue, partially blue or patched irises. This effect is desirable by DCA standards but undesirable by AKC standards."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      3
+    ],
+    "question": "What is the snout of a typical dachshund?",
+    "answer": "The snout is long."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      3
+    ],
+    "question": "What is the snout of a typical dachshund?",
+    "answer": "The snout is long."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      4
+    ],
+    "question": "What are the two types of coats that short-haired dachshunds have?",
+    "answer": "The two types of coats that short-haired dachshunds have are silky and smooth."
+  },
+  {
+    "id": 3,
+    "type": "factual",
+    "language": "en",
+    "article_title": "Dachshund",
+    "chunks": [
+      8
+    ],
+    "question": "What is the breed prone to spinal problems?",
+    "answer": "The breed is prone to spinal problems, especially intervertebral disk disease (IVDD), due in part to an extremely long spinal column and short rib cage."
+  }
+]
