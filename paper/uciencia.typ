@@ -99,25 +99,16 @@ An interactive web interface was developed to automate the process, #link("https
 - specify the number of question-answer (QA) pairs
 - Configure generation parameters (e.g., temperature, maximum tokens)
 - Choose the specific passages that provide the context for QA generation. 
-- Once the synthetic QA pairs are generated, they can be downloaded in _jsonl_ format (see @dataset-structure).
+- Once the synthetic QA pairs are generated, they can be downloaded in _json_ format (see @dataset-structure).
 
 QA pair generation is driven by the locally integrated #link("https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct")[_Qwen2.5-1.5B-Instruct-Q8_0_] model. A notable aspect of this system is its multilingual and domain-comparative capability, as it processes documents from Wikipedia and SciELO — allowing a later evaluation of language nuances on both retrieval and generation performance.
-
-    "source": "https://es.wikipedia.org/wiki/Dachshund",
-    "language": "es",
-    "chunks": [
-      {
-        "heading": "Antecedentes",
-        "level": 1,
-        "content": "El primer club de la raza se fundó en Alemania en 1888, cuando se redactó el primer estándar, aunque ejemplares de esta raza ya se habían presentado años antes en exposiciones caninas en Inglaterra.\nLa popularidad de los dachshund se ha debido en gran medida a ser una de las razas preferidas por las monarquías europeas, incluida la de la reina Victoria, que era particularmente entusiasta de esta raza.\nLa FCI decidió crear el Grupo IV sólo para esta raza, ya que a pesar de ser un perro de madriguera, su carácter y constitución distan mucho de los basset hound."
-      },
 
 #figure(
   table(
     columns: (1fr, 5fr),
     stroke: 0.2pt,
     [*File*], [*Structure Example*],
-    ["doc.jsonl"], 
+    ["doc.json"], 
 [```json 
 [{
   "title": "Linear algebra",
@@ -133,7 +124,7 @@ QA pair generation is driven by the locally integrated #link("https://huggingfac
   ]
 }] 
 ```],
-    ["qa.jsonl"], 
+    ["qa.json"], 
 [```json 
 [{
   "id": 3,
@@ -265,7 +256,7 @@ All scripts, configurations, and datasets are documented and publicly hosted on 
 
 The primary outcome of this work is the successful creation of an application and a corresponding synthetic dataset, specifically designed for evaluating RAG-based chatbots. A screenshot of the application's user interface (see @ui) demonstrates its intuitive design and ease of use. Concurrently, the CRIQAD-CU dataset has been assembled and curated by aggregating content from multilingual sources, providing a robust foundation for subsequent chatbot evaluation.
 
-When the dataset and evaluation metrics were applied to a #link("https://github.com/humankernel/rag")[RAG chatbot] (see @results), the tests revealed several potential areas for improvement. // TODO!
+// When the dataset and evaluation metrics were applied to a #link("https://github.com/humankernel/rag")[RAG chatbot] (see @results), the tests revealed several potential areas for improvement. // TODO!
 
 // The evaluation indicated that while the chatbot generates contextually relevant and coherent responses to research-oriented queries, there remain opportunities to enhance its performance. For example, discrepancies in retrieval effectiveness—as measured by Precision\@k, Recall\@k, MRR, NDCG, and MAP—suggest that fine-tuning the retrieval mechanism could lead to better selection and ranking of supporting documents. Similarly, the generation quality, assessed through metrics such as faithfulness, answer relevancy, and context relevance (using the “LLM as a Judge” approach), highlighted aspects where the responses could more accurately reflect the supporting evidence.
 
@@ -274,11 +265,6 @@ When the dataset and evaluation metrics were applied to a #link("https://github.
   image("ui.png"),
   caption: [Syntethic Dataset Generator]
 )<ui>
-
-#figure(
-  table(),
-  caption: [Evaluation Results]
-)<results>
 
 // Discusion
 
@@ -302,7 +288,13 @@ Future research should also expand the domain scope of the dataset, incorporate 
 
 == Conclusions
 
+This study introduces a comprehensive framework for the evaluation of Retrieval-Augmented Generation (RAG) systems tailored to the Cuban research context. Through the development of a user-friendly Gradio-based GUI and the construction of the CRIQAD-CU dataset, we provide both practical tools and a robust foundation for benchmarking RAG-based chatbots. These contributions not only facilitate automated synthetic data generation and structured evaluation, but also address the pressing need for context-sensitive and linguistically aligned assessment methodologies in resource-constrained academic environments.
 
+By integrating relevant retrieval and generation metrics—such as Precision\@k, MRR, MAP, and RAGAS-based scores—we enable a granular analysis of system performance across both information retrieval and response generation.
+
+The work presented lays the groundwork for future advancements in AI-powered research support systems in Cuba, paving the way for more responsive, accurate, and contextually aware chatbots.
+
+Future directions will focus on expanding the diversity of query types, refining synthetic data generation techniques, and extending this framework to other research domains and linguistic regions. Ultimately, this benchmark aims to empower Cuban researchers by enhancing access to reliable AI-driven tools that align with their unique informational needs and linguistic characteristics.
 
 
 

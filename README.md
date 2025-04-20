@@ -29,7 +29,7 @@
 *   [Quantum mechanics](https://en.wikipedia.org/wiki/Quantum_mechanics)
 *   [Thermodynamics](https://en.wikipedia.org/wiki/Thermodynamics)
 
-### General - Batman
+### General
 
 *   [Batman](https://en.wikipedia.org/wiki/Batman)
 *   [Dachshund](https://en.wikipedia.org/wiki/Dachshund)  
@@ -52,7 +52,7 @@ These questions seek specific, objective answers based on scientific facts or da
 
     How many chromosomes do humans have?
 
-[✔] 2. MultiHop Questions:
+2. MultiHop Questions:
 
 These questions require combining multiple pieces of scientific information or performing sequential reasoning.
 
@@ -193,74 +193,3 @@ $\text{AP}_i$ is the average precision of the $i^{th}$ query.
 > **Low answer correctness**: Einstein was born in Spain in 1879
 
 - Assess if the answer align with a query reference answer (ground truth)
-
-## Documents Structure
-
-```py
-class Chunk(TypedDict):
-    level: int  # heading level (h2 = 0)
-    title: str
-    text: str
-    tokens: int
-
-class Document(TypedDict):
-    title: str
-    chunks: list[Chunk]
-    categories: list[str]
-
-class WikiDocument(TypedDict):
-    url: str
-    en: Document
-    es: Document
-```
-
-**Example:** Wikipedia Primes Article
-
-```json
-{
-    "url": "https://en.wikipedia.org/wiki/Prime_number",
-    "en": {
-        "title": "Prime number",
-        "chunks": [
-            {
-                "level": 0,
-                "title": "Definition and examples",
-                "text": "A natural number (1, 2, 3, 4, 5, 6, etc.) is called a prime number (or a prime) ...",
-                "tokens": 838
-            },
-            ...
-        ],
-        "categories": [ "Category:Prime numbers", ...]
-    },
-    "es": {
-        "title": "Número primo",
-        "chunks": [
-            {
-                "level": 0,
-                "title": "El número 1 no se considera primo",
-                "text": "La cuestión acerca de si el número 1 debe o no considerarse primo está ...​",
-                "tokens": 367
-            },
-        ],
-        "categories": ["Categoría:Números primos", ...]
-    }
-},
-```
-
-## QA Structure 
-
-```py 
-class TestCase(TypeDict):
-    id: int
-    type: Literal["factual", "multihop", "complex"]
-```
-
-```json 
-{
-    "id": 0,
-    "type": "factual",
-    "question": "What is the largest known prime number as of 2024?",
-    "answer": "According to the most recent information available up until October 2024, the largest known prime number is also a Mersenne prime consisting of 41,024,320 decimal",
-    "chunks": [ 3 ]
-}
-```

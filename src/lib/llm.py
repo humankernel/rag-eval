@@ -1,10 +1,8 @@
-from typing import Literal
-
 from openai import OpenAI
 from vllm import LLM, SamplingParams
+from vllm.sampling_params import GuidedDecodingParams
 
-from lib.prompt import PROMPT
-from lib.utils import parse_qa_output
+from lib.types import QAFormat
 from settings import settings
 
 
@@ -16,7 +14,6 @@ def get_client() -> LLM | OpenAI:
             model = LLM(
                 model=settings.LLM_MODEL,
                 dtype=settings.DTYPE,
-                # gpu_memory_utilization=0.95,
                 task="generate",
                 enforce_eager=False,
                 max_model_len=settings.CTX_WINDOW,
@@ -28,55 +25,55 @@ def get_client() -> LLM | OpenAI:
     return model
 
 
-def generate(prompt: str, llm: LLM | OpenAI, model_params: dict = {}) -> str:
-    assert prompt, "A prompt must be provided!"
+def generate(prompt: str, llm: LLM | OpenAI, params: dict = {}) -> QAFormat:
     assert len(prompt) // 4 < settings.CTX_WINDOW, "Prompt too large!!"
 
+    max_tokens = params.get("max_tokens", 100)
+    temperature = params.get("temperature", 0.25)
+    top_p = params.get("top_p", 0.95)
+    frequency_penalty = params.get("frequency_penalty", 0.5)
+    presence_penalty = params.get("presence_penalty", 1.2)
+    repetition_penalty = params.get("repetition_penalty", 1.2)
+
+    response = ""
     match settings.ENVIRONMENT:
         case "prod":
             assert isinstance(llm, LLM), (
                 "LLM should be an instance of LLM class"
             )
             sampling_params = SamplingParams(
-                max_tokens=model_params.get("max_tokens", 100),
-                temperature=model_params.get("temperature", 0.25),
-                top_p=model_params.get("top_p", 0.95),
-                frequency_penalty=model_params.get("frequency_penalty", 0.5),
-                presence_penalty=model_params.get("presence_penalty", 1.2),
-                repetition_penalty=model_params.get("repetition_penalty", 1.2),
-                stop=["\nQuestion:", "\n\n", "---"],
+                max_tokens=max_tokens,
+                temperature=temperature,
+                top_p=top_p,
+                frequency_penalty=frequency_penalty,
+                presence_penalty=presence_penalty,
+                repetition_penalty=repetition_penalty,
+                guided_decoding=GuidedDecodingParams(
+                    json=QAFormat.model_json_schema()
+                ),
             )
-            outputs = llm.generate(prompt, sampling_params)
-            return outputs[0].outputs[0].text
+            response = llm.generate(prompt, sampling_params)[0].outputs[0].text
         case "dev":
             assert isinstance(llm, OpenAI), (
                 "LLM should be and instance of OpenAI class"
             )
-            params = {
-                "max_tokens": model_params.get("max_tokens", 100),
-                "temperature": model_params.get("temperature", 0.25),
-                "top_p": model_params.get("top_p", 0.95),
-                "frequency_penalty": model_params.get("frequency_penalty", 0.5),
-                "presence_penalty": model_params.get("presence_penalty", 1.2),
-                "stop": ["\nQuestion:", "\n\n", "---"],
-            }
-            response = llm.completions.create(
-                model=settings.LLM_MODEL,
-                prompt=prompt,
-                **params,
+            response = (
+                llm.chat.completions.create(
+                    messages=[{"role": "assistant", "content": prompt}],
+                    model=settings.LLM_MODEL,
+                    extra_body={"guided_json": QAFormat.model_json_schema()},
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    top_p=top_p,
+                    frequency_penalty=frequency_penalty,
+                    presence_penalty=presence_penalty,
+                )
+                .choices[0]
+                .message.content
             )
-
-            return response.choices[0].text
+            if not response:
+                raise RuntimeError("Something appened while trying to generate")
         case _:
             raise ValueError("Correctly configure the env to be dev | prod")
 
-
-def generate_qa(
-    type_q: Literal["factual", "multihop"], context: str, llm: LLM | OpenAI
-) -> tuple[str, str] | None:
-    match type_q:
-        case "factual":
-            prompt = PROMPT["factual_qa_pair"].format(context=context)
-
-    qa_output = generate(prompt=prompt, llm=llm)
-    return parse_qa_output(qa_output)
+    return QAFormat.model_validate_json(response)
