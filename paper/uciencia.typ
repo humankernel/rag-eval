@@ -148,7 +148,7 @@ To holistically assess the performance of RAG-based systems, the following metri
 
 The goal of the Retrieval Metrics is to evaluate how effectively the system identifies and ranks relevant documents from a large corpus. it is crucial that the underlying retrieval component fetches high-quality, pertinent documents that serve as a basis for generating accurate responses @Yu_2025.
 
-- *Precision\@k*: Used to measure the quality of the top k retrieved documents by calculating the fraction that are relevant. It helps evaluate the system's ability to prioritize relevant documents in the initial ranks @Yu_2025.
+- *Precision\@k*: Used to measure the quality of the top k retrieved documents by calculating the fraction that are relevant. It helps evaluate the system's ability to prioritize relevant documents in the initial ranks @Yu_2025. 
 
 $ "Precision@k" = "# of relevant documents in top k" / k $
 

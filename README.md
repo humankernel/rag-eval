@@ -1,4 +1,8 @@
-# WikiQA Dataset
+# WikiQA Dataset Creator
+
+![screenshot](paper/ui.png)
+
+This is a tool to create Syntetic Datasets using Wikipedia and LLM. It was created to evaluate -> [RAG](https://github.com/humankernel/rag-revamped)
 
 ## Selected Documents
 
